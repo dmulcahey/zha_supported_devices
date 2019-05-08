@@ -1,0 +1,14 @@
+manufacturer: LUMI
+model: lumi.sensor_motion.aq2
+description: (RTCGQ11LM) Motion and illuminance sensor
+picture: xiaomi_motion_luminance.png
+link: https://www.aqara.com/en/motion_sensor.html
+domains:
+  - name: binary_sensor
+    entities:
+      - motion
+      - occupancy
+  - name: sensor
+    entities:
+      - illuminance
+      - temperature

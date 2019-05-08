@@ -1,0 +1,10 @@
+manufacturer: LUMI
+model: lumi.sensor_cube.aqgl01
+description: (MFKZQ01LM) Cube
+picture: cube.jpg
+link: https://www.aqara.com/en/cube_controller-product.html
+domains:
+  - name: sensor
+    entities:
+      - MultistateInput
+      - AnalogInput
