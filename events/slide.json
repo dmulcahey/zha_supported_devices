@@ -1,0 +1,20 @@
+{
+    "event_type": "zha_event",
+    "data": {
+        "unique_id": "0x360d:2:0x0012",
+        "device_ieee": "00:15:8d:00:02:4a:49:e0",
+        "command": "slide",
+        "args": {
+            "value": 259,
+            "description": "arara logo on bottom",
+            "activated_face": 4
+        }
+    },
+    "origin": "LOCAL",
+    "time_fired": "2019-05-08T11:18:03.555298+00:00",
+    "context": {
+        "id": "b73985cb65bd412580c13e850765ca57",
+        "parent_id": null,
+        "user_id": null
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "event_type": "zha_event",
+    "data": {
+        "unique_id": "0x360d:2:0x0012",
+        "device_ieee": "00:15:8d:00:02:4a:49:e0",
+        "command": "flip",
+        "args": {
+            "value": 107,
+            "flip_degrees": 90,
+            "activated_face": 4
+        }
+    },
+    "origin": "LOCAL",
+    "time_fired": "2019-05-08T11:17:57.378127+00:00",
+    "context": {
+        "id": "b112d7ee8c9d4d0988fa26d5c17b0894",
+        "parent_id": null,
+        "user_id": null
+    }
+}

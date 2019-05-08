@@ -1,0 +1,20 @@
+{
+    "event_type": "zha_event",
+    "data": {
+        "unique_id": "0x360d:2:0x0012",
+        "device_ieee": "00:15:8d:00:02:4a:49:e0",
+        "command": "knock",
+        "args": {
+            "value": 517,
+            "description": "aqara logo facing user upright",
+            "activated_face": 6
+        }
+    },
+    "origin": "LOCAL",
+    "time_fired": "2019-05-08T11:17:54.882174+00:00",
+    "context": {
+        "id": "d476538d0a2342079335e26f69ef259d",
+        "parent_id": null,
+        "user_id": null
+    }
+}

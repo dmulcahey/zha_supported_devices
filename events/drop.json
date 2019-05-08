@@ -1,0 +1,18 @@
+{
+    "event_type": "zha_event",
+    "data": {
+        "unique_id": "0x360d:2:0x0012",
+        "device_ieee": "00:15:8d:00:02:4a:49:e0",
+        "command": "drop",
+        "args": {
+            "value": 3
+        }
+    },
+    "origin": "LOCAL",
+    "time_fired": "2019-05-08T11:18:08.193250+00:00",
+    "context": {
+        "id": "07c0fc4e86584b2e9b003e840df633c6",
+        "parent_id": null,
+        "user_id": null
+    }
+}
