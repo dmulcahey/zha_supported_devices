@@ -5,6 +5,7 @@ from shutil import copyfile
 
 _LOGGER = logging.getLogger(__name__)
 
+
 def generate_device_page(template_path, manufacturer, device_model):
     device = {}
     with open(template_path + '/device.yaml', "r") as device_file:
@@ -39,8 +40,12 @@ def generate_device_page(template_path, manufacturer, device_model):
     device_file.write(output)
     device_file.close()
 
-    copyfile(template_path + '/' + device['picture'], '../output/devices/' + manufacturer + '/' + device['picture'])
+    copyfile(
+        template_path + '/' + device['picture'],
+        '../output/devices/' + manufacturer + '/' + device['picture']
+    )
     return device['model']
+
 
 def generate_events(events_path):
     events_text = '# Events\n\n'
@@ -48,23 +53,28 @@ def generate_events(events_path):
     for event_file in event_files:
         full_path = events_path + '/' + event_file
         file_content = open(full_path, 'r').read()
-        events_text += '## ' + os.path.splitext(os.path.basename(full_path))[0] + '\n\n'
+        events_text += '## ' + os.path.splitext(
+            os.path.basename(full_path)
+        )[0] + '\n\n'
         events_text += '```json\n'
         events_text += file_content
         events_text += '\n'
         events_text += '```\n\n'
     return events_text
-    
 
 
-manufacturers = next(os.walk('../devices'))[1] # get just sub directories
+manufacturers = next(os.walk('../devices'))[1]  # get just sub directories
 index_content = '# ZHA - Supported Devices\n\n'
 
 for manufacturer in manufacturers:
     index_content += '## ' + manufacturer + '\n\n'
     devices = next(os.walk('../devices/' + manufacturer))[1]
     for device in devices:
-        index_content += '[' + generate_device_page('../devices/' + manufacturer + '/' + device, manufacturer, device) + '](./devices/' + manufacturer + '/' + device + '.md)\n\n'
+        index_content += '[' + generate_device_page(
+            '../devices/' + manufacturer + '/' + device,
+            manufacturer,
+            device
+        ) + '](./devices/' + manufacturer + '/' + device + '.md)\n\n'
 print(index_content)
 index_file = open("../output/index.md", "w")
 index_file.write(index_content)
